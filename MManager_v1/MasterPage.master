@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Maintenance Manager App</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="Style/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="Style/css/simple-sidebar.css" rel="stylesheet" />
+    <link href="Style/css/my-settings.css" rel="stylesheet" />
+        <%--Incidencias CSS--%>
+        <link href="Style/css/p-incidencias.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+        <!-- Sidebar -->
+            <asp:ContentPlaceHolder id="Menu" Runat="Server">
+
+            </asp:ContentPlaceHolder>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <asp:ContentPlaceHolder id="ContentWeb" runat="server">
+
+            </asp:ContentPlaceHolder>
+                        <p><a href="#menu-toggle" class="btn btn-default glyphicon glyphicon-resize-horizontal" id="menu-toggle"> Menú</a></p>
+        <footer>
+            <small>Maintenance Manager App · 2016 · Powered by JazProjects</small>
+        </footer>
+        </div><!-- /#page-content-wrapper -->
+        </div><!-- /#wrapper -->
+    </form>
+
+<!-- jQuery -->
+<script src="Style/js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="Style/js/bootstrap.min.js"></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
+</body>
+</html>

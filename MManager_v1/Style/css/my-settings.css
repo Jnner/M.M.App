@@ -1,0 +1,32 @@
+﻿
+footer {
+    padding-top: 30px;
+}
+.mp-setting-content {
+    margin-left: 20%;
+}
+#menu-toggle {
+
+}
+
+/*PAGINA INDEX*/
+.dtlView {
+    width: 50%;
+}
+.dtlViewHeader {
+    width: 30%;
+    text-align: right;
+    padding-right: 10px;
+}
+.dtlViewItem {
+    text-align: left;
+    padding-left: 10px;
+}
+.dtlViewControlItem {
+    /*referenciado en el ItemStyle de CommandsField*/
+}
+.dtlViewComands {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
