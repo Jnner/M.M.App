@@ -1,32 +1,52 @@
 ﻿
 footer {
-    padding-top: 30px;
-}
+    padding-top: 30px; }
+
 .mp-setting-content {
-    margin-left: 20%;
-}
-#menu-toggle {
+    margin-left: 20%; }
 
-}
+#menu-toggle { }
 
-/*PAGINA INDEX*/
+/*DETAILS-VIEW*/
 .dtlView {
-    width: 50%;
-}
+    width: 50%; }
+
 .dtlViewHeader {
     width: 30%;
     text-align: right;
-    padding-right: 10px;
-}
+    padding-right: 10px; }
+
 .dtlViewItem {
     text-align: left;
-    padding-left: 10px;
-}
+    padding-left: 10px; }
+
 .dtlViewControlItem {
-    /*referenciado en el ItemStyle de CommandsField*/
-}
+    /*referenciado en el ItemStyle de CommandsField*/ }
 .dtlViewComands {
     margin-top: 10px;
     margin-bottom: 10px;
-    text-align: center;
-}
+    text-align: center; }
+
+/*GRID-VIEW*/
+.grdView {background-color: #fff; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; font-family:Calibri; color: #474747;}
+
+.grdView td {
+	padding: 2px; }
+
+.grdView th  {
+      padding : 4px 2px;
+      color: #fff;
+      text-align: center;
+      background: #4D477B repeat-x top;
+      border-left: solid 1px #828287;
+      font-size: 0.9em; }
+
+/*.grdView .alt {
+      background: black repeat-x top;
+      border-left: solid 1px #525252; }*/
+
+.grdView .pgr {background: #363670 repeat-x top; }
+.grdView .pgr table { margin: 3px 0; }
+.grdView .pgr td { border-width: 0; padding: 0 6px; border-left: solid 1px #666; font-weight: bold; color: #fff; line-height: 12px; }  
+.grdView .pgr a { color: Gray; text-decoration: none; }
+.grdView .pgr a:hover { color: #000; text-decoration: none; }

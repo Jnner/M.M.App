@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MPdirector.master" AutoEventWireup="true" CodeFile="DirectorUsuarios.aspx.cs" Inherits="DirectorUsuarios" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MPrecepcion.master" AutoEventWireup="true" CodeFile="RecepcionUsuarios.aspx.cs" Inherits="DirectorUsuarios" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentWeb" Runat="Server">
     <div class="panel panel-success">
       <div class="panel-heading">
-          <h2>Usuarios</h2>
+          <h2>Mis Datos</h2>
       </div>
       <div class="panel-body">
           <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [USER] WHERE [IdUser] = @IdUser" InsertCommand="INSERT INTO [USER] ([IdUser], [nombre], [pass], [rol]) VALUES (@IdUser, @nombre, @pass, @rol)" SelectCommand="SELECT * FROM [USER] WHERE ([IdUser] = @IdUser)" UpdateCommand="UPDATE [USER] SET [nombre] = @nombre, [pass] = @pass, [rol] = @rol WHERE [IdUser] = @IdUser">
@@ -44,7 +44,7 @@
                   <asp:BoundField DataField="rol" HeaderText="Rol" SortExpression="rol">
                   <ItemStyle CssClass="dtlViewItem" />
                   </asp:BoundField>
-                  <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True">
+                  <asp:CommandField ButtonType="Button" ShowEditButton="True">
                   <ControlStyle CssClass="dtlViewComands" />
                   </asp:CommandField>
               </Fields>
@@ -54,15 +54,12 @@
               <RowStyle BackColor="#E3EAEB" CssClass="dtlViewField" />
           </asp:DetailsView>
           <hr />
-          <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [USER]"></asp:SqlDataSource>
+          <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [IdUser], [nombre] FROM [USER]"></asp:SqlDataSource>
           <asp:GridView ID="grdUsuarios" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource4" ForeColor="#333333" GridLines="None" HorizontalAlign="Center" Width="100%" DataKeyNames="IdUser" CssClass="grdView" PagerStyle-CssClass="pgr">
               <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
               <Columns>
-                  <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
-                  <asp:BoundField DataField="IdUser" HeaderText="ID" ReadOnly="True" SortExpression="IdUser" />
-                  <asp:BoundField DataField="nombre" HeaderText="Nombre" SortExpression="nombre" />
-                  <asp:BoundField DataField="pass" HeaderText="Contraseña" SortExpression="pass" />
-                  <asp:BoundField DataField="rol" HeaderText="Rol" SortExpression="rol" />
+                  <asp:BoundField DataField="IdUser" HeaderText="IdUser" ReadOnly="True" SortExpression="IdUser" />
+                  <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre" />
               </Columns>
               <EditRowStyle BackColor="#999999" />
               <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MPdirector.master" AutoEventWireup="true" CodeFile="DirectorInstalaciones.aspx.cs" Inherits="DirectorInstalaciones" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MPtecnico.master" AutoEventWireup="true" CodeFile="TecnicoInstalaciones.aspx.cs" Inherits="DirectorInstalaciones" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentWeb" Runat="Server">
     <div class="panel panel-success">
@@ -48,7 +48,7 @@
                   <asp:BoundField DataField="lugar" HeaderText="Lugar" SortExpression="lugar" >
                   <ItemStyle CssClass="dtlViewItem" />
                   </asp:BoundField>
-                  <asp:CommandField ButtonType="Button" ShowInsertButton="True" >
+                  <asp:CommandField ButtonType="Button" ShowInsertButton="True" ShowDeleteButton="True" ShowEditButton="True" >
                   <ControlStyle CssClass="dtlViewComands" />
                   </asp:CommandField>
               </Fields>
