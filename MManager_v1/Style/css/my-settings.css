@@ -1,16 +1,42 @@
-﻿/*LOGIN*/
-.login {
-     }
+﻿/*LOGIN / LOGOUT*/
+#tableLogin {
+    border:0;
+}
+#tableLogin td {
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
 
-.login-boton {
-    text-align: center; }
+.btn-login  {
+    margin-top: 20px;
+    height: 2.5em;
+    border: 0;
+    color: #778893;
+    border-radius:20px;
+    transition:0.5s;
+    background-color: #2D4757;
+}
+.btn-login:hover {border-radius:3px; }
+.btn-login:active {background-color:#778893; }
+
+.btn-logout {
+    border: 0;
+    color: #778893;
+    border-radius:3px;
+    transition:0.5s;
+    transform:scale(1,0.8);
+    background-color: #2D4757;
+}
+.btn-logout:hover {border-radius:20px; }
+.btn-logout:active {background-color:#778893; }
 
 /*TEMPLATE PAGE*/
 footer {
     padding-top: 30px; }
 
 .center {
-    text-align: center; }
+    text-align: center;
+    align-content: center; }
 
 .mp-setting-content {
     margin-left: 20%; }

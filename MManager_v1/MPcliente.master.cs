@@ -11,4 +11,10 @@ public partial class MPdirector : System.Web.UI.MasterPage
     {
 
     }
+    protected void btnLogout_Click(object sender, EventArgs e)
+    {
+        Session.Clear();
+        Session.Abandon();
+        Response.Redirect("~/Index.aspx", false);
+    }
 }

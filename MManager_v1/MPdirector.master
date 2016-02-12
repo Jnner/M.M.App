@@ -21,6 +21,9 @@
             <li>
 		        <a href="DirectorInstalaciones.aspx">INSTALACIONES</a>
 	        </li>
+            <li>
+		        <asp:Button ID="btnLogoutDirector" runat="server" Text="Cerrar Sesión" CssClass="btn-logout" OnClick="btnLogout_Click" />
+	        </li>
         </ul>
     </div>
 </asp:Content>

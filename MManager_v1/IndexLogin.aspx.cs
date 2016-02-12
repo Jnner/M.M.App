@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 
-public partial class IndexLogin : System.Web.UI.Page
+public partial class Index : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -34,6 +34,12 @@ public partial class IndexLogin : System.Web.UI.Page
                 reader.Close();
                 comando.Dispose();
                 conexion.Close();
+                if (Convert.ToString(Session["rol"]) == "Cliente")
+                    Response.Redirect("~/IndexCliente.aspx");
+                if (Convert.ToString(Session["rol"]) == "Recepcion")
+                    Response.Redirect("~/IndexRecepcion.aspx");
+                if (Convert.ToString(Session["rol"]) == "Tecnico")
+                    Response.Redirect("~/IndexTecnico.aspx");
                 if (Convert.ToString(Session["rol"]) == "SuperUser")
                     Response.Redirect("~/IndexDirector.aspx");
             }
@@ -51,6 +57,7 @@ public partial class IndexLogin : System.Web.UI.Page
             StrError = StrError + "<div>Código: " + ex.Number + "</div>";
             StrError = StrError + "<div>Descripción: " + ex.Message + "</div>";
             lblMensajes.Text = StrError;
+            lblMensajes.Visible = true;
             return;
         }
     }

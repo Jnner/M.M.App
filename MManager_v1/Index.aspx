@@ -30,7 +30,6 @@
                 <li><a href="About.aspx">Acerca de MMApp</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
                 <li><a href="IndexLogin.aspx"><span class="glyphicon glyphicon-log-in"></span> Acceder</a></li>
             </ul>
             </div>

@@ -17,6 +17,9 @@
             <li>
 		        <a href="TecnicoUsuarios.aspx">Mis Datos</a>
 	        </li>
+            <li>
+		        <asp:Button ID="btnLogoutTecnico" runat="server" Text="Cerrar Sesión" CssClass="btn-logout" OnClick="btnLogout_Click" />
+	        </li>
         </ul>
     </div>
 </asp:Content>
