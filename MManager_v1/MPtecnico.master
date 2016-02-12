@@ -6,7 +6,7 @@
       <div id="sidebar-wrapper">
         <ul class="sidebar-nav disabled">
 	        <li class="sidebar-brand">
-                <a href="Index.aspx"><img src="Images/logo.png" /> M.M.App</a>
+                <a href="IndexTecnico.aspx"><img src="Images/logo.png" /> M.M.App</a>
 	        </li>
 	        <li>
 		        <a href="TecnicoIncidencias.aspx">INCIDENCIAS</a>

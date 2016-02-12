@@ -1,6 +1,16 @@
-﻿
+﻿/*LOGIN*/
+.login {
+     }
+
+.login-boton {
+    text-align: center; }
+
+/*TEMPLATE PAGE*/
 footer {
     padding-top: 30px; }
+
+.center {
+    text-align: center; }
 
 .mp-setting-content {
     margin-left: 20%; }
