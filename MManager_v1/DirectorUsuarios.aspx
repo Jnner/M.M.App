@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MPdirector.master" AutoEventWireup="true" CodeFile="DirectorUsuarios.aspx.cs" Inherits="DirectorUsuarios" %>
+<%@ OutputCache Duration="1" VaryByParam="None" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentWeb" Runat="Server">
-    <div class="panel panel-success">
+    <div class="panel panel-danger">
       <div class="panel-heading">
           <h2>Usuarios</h2>
       </div>

@@ -10,11 +10,9 @@ public partial class IndexDirector : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Convert.ToString(Session["rol"]) != "SuperUser")
+        if (Convert.ToString(Session["rol"]) != "Tecnico")
         {
             Response.Redirect("~/IndexLogin.aspx");
         }
-        lblDatosUser.Text = Convert.ToString(Session["rol"]) +
-        " - " + Convert.ToString(Session["nombre"]);
     }
 }

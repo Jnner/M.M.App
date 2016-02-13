@@ -31,7 +31,8 @@
             </asp:ContentPlaceHolder>
                         <p><a href="#menu-toggle" class="btn btn-default glyphicon glyphicon-resize-horizontal" id="menu-toggle"> Menú</a></p>
         <footer>
-            <small>Maintenance Manager App · 2016 · Powered by JazProjects</small>
+            <p><strong>Maintenance Manager App</strong></p>
+            <p>2016 · <strong>JazProjects</strong></p>
         </footer>
         </div><!-- /#page-content-wrapper -->
         </div><!-- /#wrapper -->

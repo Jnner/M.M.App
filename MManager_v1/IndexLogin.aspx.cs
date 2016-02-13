@@ -35,13 +35,13 @@ public partial class Index : System.Web.UI.Page
                 comando.Dispose();
                 conexion.Close();
                 if (Convert.ToString(Session["rol"]) == "Cliente")
-                    Response.Redirect("~/IndexCliente.aspx");
+                    Response.Redirect("~/ClienteIndex.aspx");
                 if (Convert.ToString(Session["rol"]) == "Recepcion")
-                    Response.Redirect("~/IndexRecepcion.aspx");
+                    Response.Redirect("~/RecepcionIndex.aspx");
                 if (Convert.ToString(Session["rol"]) == "Tecnico")
-                    Response.Redirect("~/IndexTecnico.aspx");
+                    Response.Redirect("~/TecnicoIndex.aspx");
                 if (Convert.ToString(Session["rol"]) == "SuperUser")
-                    Response.Redirect("~/IndexDirector.aspx");
+                    Response.Redirect("~/DirectorIndex.aspx");
             }
             else
             {

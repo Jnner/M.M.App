@@ -9,7 +9,10 @@ public partial class DirectorIncidencias : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Convert.ToString(Session["rol"]) != "Tecnico")
+        {
+            Response.Redirect("~/IndexLogin.aspx");
+        }
     }
     protected void dtlIncidencias_ItemDeleted(object sender, DetailsViewDeletedEventArgs e)
     {

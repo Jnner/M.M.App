@@ -6,13 +6,12 @@
       <div id="sidebar-wrapper">
         <ul class="sidebar-nav disabled">
 	        <li class="sidebar-brand">
-                <a href="IndexRecepcion.aspx"><img src="Images/logo.png" /> M.M.App</a>
+                <a href="RecepcionIndex.aspx"><img src="Images/logo.png" /> 
+                    <asp:Label ID="lblUserMenu" runat="server" Text="Datos User"></asp:Label>
+                </a>
 	        </li>
 	        <li>
 		        <a href="RecepcionIncidencias.aspx">INCIDENCIAS</a>
-	        </li>
-            <li>
-		        <a href="RecepcionUsuarios.aspx">Mis Datos</a>
 	        </li>
             <li>
 		        <asp:Button ID="btnLogoutRecepcion" runat="server" Text="Cerrar Sesión" CssClass="btn-logout" OnClick="btnLogout_Click" />
@@ -21,6 +20,7 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentWeb" Runat="Server">
+    <h4 class="right"><asp:Label ID="lblUserPage" runat="server" Text="Label" class="label label-default"></asp:Label></h4>
     <asp:ContentPlaceHolder id="ContentWeb" runat="server">
 
     </asp:ContentPlaceHolder>

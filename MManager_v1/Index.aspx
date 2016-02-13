@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Index.aspx.cs" Inherits="Index" %>
+<%@ OutputCache Duration="1" VaryByParam="None" %>
 
 <!DOCTYPE html>
 
@@ -27,7 +28,7 @@
             </div>--%>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Inicio</a></li>
-                <li><a href="About.aspx">Acerca de MMApp</a></li>
+                <li><a href="IndexAbout.aspx">Acerca de MMApp</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="IndexLogin.aspx"><span class="glyphicon glyphicon-log-in"></span> Acceder</a></li>

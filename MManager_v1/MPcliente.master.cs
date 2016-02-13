@@ -9,7 +9,12 @@ public partial class MPdirector : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Convert.ToString(Session["rol"]) != "Cliente")
+        {
+            Response.Redirect("~/IndexLogin.aspx");
+        }
+        lblUserMenu.Text = Convert.ToString(Session["IdUser"]);
+        lblUserPage.Text = Convert.ToString(Session["rol"]);
     }
     protected void btnLogout_Click(object sender, EventArgs e)
     {

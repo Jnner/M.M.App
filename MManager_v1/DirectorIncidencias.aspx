@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MPdirector.master" AutoEventWireup="true" CodeFile="DirectorIncidencias.aspx.cs" Inherits="DirectorIncidencias" %>
-
+<%@ OutputCache Duration="1" VaryByParam="None" %>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentWeb" Runat="Server">
     <div class="panel panel-danger">

@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="About.aspx.cs" Inherits="About" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="IndexAbout.aspx.cs" Inherits="About" %>
+<%@ OutputCache Duration="1" VaryByParam="None" %>
 
 <!DOCTYPE html>
 

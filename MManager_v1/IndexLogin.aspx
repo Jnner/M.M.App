@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="IndexLogin.aspx.cs" Inherits="Index" %>
+<%@ OutputCache Duration="1" VaryByParam="None" %>
 
 <!DOCTYPE html>
 
@@ -32,7 +33,7 @@
             </div>--%>
             <ul class="nav navbar-nav">
                 <li><a href="Index.aspx">Inicio</a></li>
-                <li><a href="About.aspx">Acerca de MMApp</a></li>
+                <li><a href="IndexAbout.aspx">Acerca de MMApp</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Acceder</a></li>
@@ -47,7 +48,7 @@
                             <td>
                                 <table cellpadding="0">
                                     <tr>
-                                        <td align="center" colspan="2" class="auto-style1">Inicia Sesión</td>
+                                        <td align="center" colspan="2" class="auto-style1">Ir a Mi Cuenta</td>
                                     </tr>
                                     <tr>
                                         <td align="right">
@@ -77,7 +78,7 @@
                                     </tr>
                                     <tr>
                                         <td align="center" colspan="2">
-                                            <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Entrar" ValidationGroup="Login1" CssClass="btn-login" />
+                                            <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Abrir Sesión" ValidationGroup="Login1" CssClass="btn-login" />
                                         </td>
                                     </tr>
                                 </table>
