@@ -14,4 +14,12 @@ public partial class IndexDirector : System.Web.UI.Page
             Response.Redirect("~/IndexLogin.aspx");
         }
     }
+    protected void dtlUsuarios_ItemUpdated(object sender, DetailsViewUpdatedEventArgs e)
+    {
+        
+    }
+    protected void grdPersonal_RowUpdated(object sender, GridViewUpdatedEventArgs e)
+    {
+        grdPersonal.DataBind();
+    }
 }

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.SqlClient;
 
 public partial class IndexDirector : System.Web.UI.Page
 {
@@ -14,5 +13,13 @@ public partial class IndexDirector : System.Web.UI.Page
         {
             Response.Redirect("~/IndexLogin.aspx");
         }
+    }
+    protected void dtlUsuarios_ItemUpdated(object sender, DetailsViewUpdatedEventArgs e)
+    {
+        
+    }
+    protected void grdPersonal_RowUpdated(object sender, GridViewUpdatedEventArgs e)
+    {
+        grdPersonal.DataBind();
     }
 }

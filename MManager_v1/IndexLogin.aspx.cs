@@ -15,10 +15,11 @@ public partial class Index : System.Web.UI.Page
     protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
     {
         string StrCadenaConexion = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=" +
-        Server.MapPath("~/App_Data/MManager02.mdf") + ";Integrated Security=True;Connect Timeout=30";
+        Server.MapPath("~/App_Data/MManager02.mdf") + ";Integrated Security=True;Connect Timeout=999999";
         string StrComandoSql = "SELECT IdUser, nombre, rol FROM [USER] ";
         StrComandoSql = StrComandoSql + " WHERE IdUser='" + Login1.UserName + "' ";
         StrComandoSql = StrComandoSql + "AND pass='" + Login1.Password + "';";
+        
         try
         {
             SqlConnection conexion = new SqlConnection(StrCadenaConexion);
@@ -34,8 +35,8 @@ public partial class Index : System.Web.UI.Page
                 reader.Close();
                 comando.Dispose();
                 conexion.Close();
-                if (Convert.ToString(Session["rol"]) == "Cliente")
-                    Response.Redirect("~/ClienteIndex.aspx");
+                if (Convert.ToString(Session["rol"]) == "RoomService")
+                    Response.Redirect("~/RoomserviceIndex.aspx");
                 if (Convert.ToString(Session["rol"]) == "Recepcion")
                     Response.Redirect("~/RecepcionIndex.aspx");
                 if (Convert.ToString(Session["rol"]) == "Tecnico")
