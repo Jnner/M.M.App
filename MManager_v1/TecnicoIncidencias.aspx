@@ -86,9 +86,18 @@
                   <asp:BoundField DataField="comentario" HeaderText="Comentario" SortExpression="comentario">
                   <ItemStyle CssClass="dtlViewItem" />
                   </asp:BoundField>
-                  <asp:BoundField DataField="fecha" HeaderText="Fecha" SortExpression="fecha">
-                  <ItemStyle CssClass="dtlViewItem" />
-                  </asp:BoundField>
+                  <asp:TemplateField HeaderText="Fecha" SortExpression="fecha">
+                      <EditItemTemplate>
+                          <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("fecha") %>'></asp:TextBox>
+                      </EditItemTemplate>
+                      <InsertItemTemplate>
+                          <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("fecha") %>'></asp:TextBox>
+                      </InsertItemTemplate>
+                      <ItemTemplate>
+                          <asp:Label ID="Label4" runat="server" Text='<%# Bind("fecha") %>'></asp:Label>
+                      </ItemTemplate>
+                      <ItemStyle CssClass="dtlViewItem" />
+                  </asp:TemplateField>
                   <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True">
                   <ControlStyle CssClass="dtlViewComands" />
                   <ItemStyle CssClass="dtlViewComands" />

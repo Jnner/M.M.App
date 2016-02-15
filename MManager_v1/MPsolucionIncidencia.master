@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MPtecnico.master.cs" Inherits="MPdirector" %>
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MPsolucionIncidencia.master.cs" Inherits="MPdirector" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -6,21 +6,12 @@
       <div id="sidebar-wrapper">
         <ul class="sidebar-nav disabled">
 	        <li class="sidebar-brand">
-                <a href="TecnicoIndex.aspx"><img src="Images/logo.png" /> 
+                <a href="#"><img src="Images/logo.png" /> 
                     <asp:Label ID="lblUserMenu" runat="server" Text="Datos User"></asp:Label>
                 </a>
 	        </li>
-	        <li>
-		        <a href="TecnicoIncidencias.aspx">INCIDENCIAS</a>
-	        </li>
             <li>
-		        <a href="SolucionIncidencias.aspx">Incidencias Solucionadas</a>
-	        </li>
-            <li>
-		        <a href="TecnicoInstalaciones.aspx">INSTALACIONES</a>
-	        </li>
-            <li>
-		        <asp:Button ID="btnLogoutTecnico" runat="server" Text="Cerrar Sesión" CssClass="btn-logout" OnClick="btnLogout_Click" />
+		        <asp:Button ID="btnLogoutCliente" runat="server" Text="< Volver" CssClass="btn-logout" OnClick="btnLogout_Click" />
 	        </li>
         </ul>
     </div>

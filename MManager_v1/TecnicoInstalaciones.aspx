@@ -101,7 +101,7 @@
           </asp:DetailsView>
           <hr />
           <asp:SqlDataSource ID="grdView" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [INSTALACION]"></asp:SqlDataSource>
-          <asp:GridView ID="grdInstalaciones" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="IdInstalacion" DataSourceID="grdView" ForeColor="#333333" GridLines="None" HorizontalAlign="Center" Width="100%" CssClass="grdView" PagerStyle-CssClass="pgr" AllowSorting="True">
+          <asp:GridView ID="grdInstalaciones" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="IdInstalacion" DataSourceID="grdView" ForeColor="#333333" GridLines="None" HorizontalAlign="Center" Width="100%" CssClass="grdView" PagerStyle-CssClass="pgr">
               <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
               <Columns>
                   <asp:CommandField ButtonType="Button" ShowSelectButton="True" />

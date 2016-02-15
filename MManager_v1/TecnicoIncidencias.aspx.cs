@@ -9,7 +9,7 @@ public partial class DirectorIncidencias : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Convert.ToString(Session["rol"]) != "Tecnico")
+        if (Convert.ToString(Session["IdRol"]) != "Tecnico")
         {
             Response.Redirect("~/IndexLogin.aspx");
         }
@@ -60,10 +60,15 @@ public partial class DirectorIncidencias : System.Web.UI.Page
     // FUNCION AUTORELLENADO DEL CAMPO IdUser EN EL DETAILSVIEW DEPENDIENDO DEL USER LOGEADO
     protected void DetailsView1_DataBound(object sender, EventArgs e)
     {
-        if (DetailsView1.CurrentMode == DetailsViewMode.Insert)
+        if (DetailsView1.CurrentMode == DetailsViewMode.Insert || DetailsView1.CurrentMode == DetailsViewMode.Edit)
         {
+            DateTime hoy = DateTime.Today;
             TextBox TextBox1 = DetailsView1.FindControl("TextBox1") as TextBox;
+            TextBox TextBox2 = DetailsView1.FindControl("TextBox2") as TextBox;
+
             TextBox1.Text = Session["IdUser"].ToString();
+
+            TextBox2.Text = hoy.ToShortDateString();
         }
     }
 }

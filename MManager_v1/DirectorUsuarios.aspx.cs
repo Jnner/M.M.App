@@ -5,29 +5,56 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class DirectorUsuarios : System.Web.UI.Page
+public partial class DirectorIncidencias : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Convert.ToString(Session["rol"]) != "SuperUser")
+        if (Convert.ToString(Session["IdRol"]) != "SuperUser")
         {
             Response.Redirect("~/IndexLogin.aspx");
         }
+        if (!IsPostBack)
+        {
+            DetailsView1.Visible = false;
+            btnInsert.Visible = true;
+        }
+        else
+        {
+            DetailsView1.Visible = true;
+            btnInsert.Visible = false;
+        }
     }
-    protected void dtlUsuarios_ItemCreated(object sender, EventArgs e)
+    // Funcion del boton nuevo
+    protected void btnInsert_Click(object sender, EventArgs e)
     {
-        
+        DetailsView1.Visible = true;
+        DetailsView1.ChangeMode(DetailsViewMode.Insert);
+        btnInsert.Visible = false;
     }
-    protected void dtlUsuarios_ItemDeleted(object sender, DetailsViewDeletedEventArgs e)
+    // Control DetailsView para botones pulsados
+    protected void DetailsView1_ItemCommand(object sender, DetailsViewCommandEventArgs e)
     {
-        grdUsuarios.DataBind();
+        if (e.CommandName.Equals("cancel", StringComparison.CurrentCultureIgnoreCase))
+        {
+            DetailsView1.Visible = false;
+            btnInsert.Visible = true;
+            grdIncidencias.DataBind();
+        }
     }
-    protected void dtlUsuarios_ItemInserted(object sender, DetailsViewInsertedEventArgs e)
+    protected void dtlIncidencias_ItemDeleted(object sender, DetailsViewDeletedEventArgs e)
     {
-        grdUsuarios.DataBind();
+        DetailsView1.Visible = false;
+        btnInsert.Visible = true;
+        grdIncidencias.DataBind();
     }
-    protected void dtlUsuarios_ItemUpdated(object sender, DetailsViewUpdatedEventArgs e)
+    protected void dtlIncidencias_ItemInserted(object sender, DetailsViewInsertedEventArgs e)
     {
-        grdUsuarios.DataBind();
+        DetailsView1.Visible = false;
+        btnInsert.Visible = true;
+        grdIncidencias.DataBind();
+    }
+    protected void dtlIncidencias_ItemUpdated(object sender, DetailsViewUpdatedEventArgs e)
+    {
+        grdIncidencias.DataBind();
     }
 }

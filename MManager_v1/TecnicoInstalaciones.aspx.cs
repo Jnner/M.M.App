@@ -9,7 +9,7 @@ public partial class DirectorInstalaciones : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Convert.ToString(Session["rol"]) != "Tecnico")
+        if (Convert.ToString(Session["IdRol"]) != "Tecnico")
         {
             Response.Redirect("~/IndexLogin.aspx");
         }

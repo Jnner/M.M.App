@@ -9,7 +9,7 @@ public partial class IndexDirector : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Convert.ToString(Session["rol"]) != "Cliente")
+        if (Convert.ToString(Session["IdRol"]) != "RoomService")
         {
             Response.Redirect("~/IndexLogin.aspx");
         }
