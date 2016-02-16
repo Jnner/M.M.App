@@ -101,16 +101,27 @@
           </asp:DetailsView>
           <hr />
           <asp:SqlDataSource ID="grdView" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [INSTALACION]"></asp:SqlDataSource>
+          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT COUNT(IdIncidencia) FROM [INCIDENCIA]
+INNER JOIN [INSTALACION] ON [INCIDENCIA].[IdIncidencia] = [INSTALACION].[IdIncid]
+
+WHERE [INCIDENCIA].[IdTipo] = [INSTALACION].[IdTipo]
+AND [INCIDENCIA].[IdLugar] = [INSTALACION].[IdLugar]"></asp:SqlDataSource>
           <asp:GridView ID="grdInstalaciones" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="IdInstalacion" DataSourceID="grdView" ForeColor="#333333" GridLines="None" HorizontalAlign="Center" Width="100%" CssClass="grdView" PagerStyle-CssClass="pgr">
               <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
               <Columns>
                   <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
-                  <asp:BoundField DataField="IdInstalacion" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="IdInstalacion" />
+                  <asp:BoundField DataField="IdInstalacion" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="IdInstalacion" Visible="False" />
                   <asp:BoundField DataField="IdTipo" HeaderText="Tipo" SortExpression="IdTipo" />
                   <asp:BoundField DataField="IdLugar" HeaderText="Lugar" SortExpression="IdLugar" />
                   <asp:BoundField DataField="IdUser" HeaderText="Usuario" SortExpression="IdUser" Visible="False" />
                   <asp:BoundField DataField="modelo" HeaderText="Modelo" SortExpression="modelo" />
                   <asp:BoundField DataField="marca" HeaderText="Marca" SortExpression="marca" />
+                  <asp:TemplateField HeaderText="Fallos">
+                      <ItemTemplate>
+                          <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSource1" DataTextField="Column1" DataValueField="Column1">
+                          </asp:DropDownList>
+                      </ItemTemplate>
+                  </asp:TemplateField>
               </Columns>
               <EditRowStyle BackColor="#999999" />
               <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

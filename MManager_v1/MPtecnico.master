@@ -10,6 +10,12 @@
                     <asp:Label ID="lblUserMenu" runat="server" Text="Datos User"></asp:Label>
                 </a>
 	        </li>
+            <li>
+		        <a href="TecnicoPrioridad.aspx">PRIORITARIO</a>
+	        </li>
+            <li>
+		        <a href="TecnicoMisIncidencias.aspx">Avisado por mí</a>
+	        </li>
 	        <li>
 		        <a href="TecnicoIncidencias.aspx">INCIDENCIAS</a>
 	        </li>

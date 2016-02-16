@@ -43,6 +43,30 @@
                   <asp:BoundField DataField="IdIncidencia" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="IdIncidencia">
                   <ItemStyle CssClass="dtlViewItem" />
                   </asp:BoundField>
+                  <asp:TemplateField HeaderText="Avisa" SortExpression="IdUser">
+                      <EditItemTemplate>
+                          <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("IdUser") %>'></asp:TextBox>
+                      </EditItemTemplate>
+                      <InsertItemTemplate>
+                          <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("IdUser") %>'></asp:TextBox>
+                      </InsertItemTemplate>
+                      <ItemTemplate>
+                          <asp:Label ID="Label3" runat="server" Text='<%# Bind("IdUser") %>'></asp:Label>
+                      </ItemTemplate>
+                      <ItemStyle CssClass="dtlViewItem" />
+                  </asp:TemplateField>
+                  <asp:TemplateField HeaderText="Fecha" SortExpression="fecha">
+                      <EditItemTemplate>
+                          <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("fecha") %>'></asp:TextBox>
+                      </EditItemTemplate>
+                      <InsertItemTemplate>
+                          <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("fecha") %>'></asp:TextBox>
+                      </InsertItemTemplate>
+                      <ItemTemplate>
+                          <asp:Label ID="Label4" runat="server" Text='<%# Bind("fecha") %>'></asp:Label>
+                      </ItemTemplate>
+                      <ItemStyle CssClass="dtlViewItem" />
+                  </asp:TemplateField>
                   <asp:TemplateField HeaderText="Tipo" SortExpression="IdTipo">
                       <EditItemTemplate>
                           <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="dtlTipo" DataTextField="IdTipo" DataValueField="IdTipo" SelectedValue='<%# Bind("IdTipo") %>'>
@@ -71,33 +95,9 @@
                       </ItemTemplate>
                       <ItemStyle CssClass="dtlViewItem" />
                   </asp:TemplateField>
-                  <asp:TemplateField HeaderText="Creada por" SortExpression="IdUser">
-                      <EditItemTemplate>
-                          <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("IdUser") %>'></asp:TextBox>
-                      </EditItemTemplate>
-                      <InsertItemTemplate>
-                          <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("IdUser") %>'></asp:TextBox>
-                      </InsertItemTemplate>
-                      <ItemTemplate>
-                          <asp:Label ID="Label3" runat="server" Text='<%# Bind("IdUser") %>'></asp:Label>
-                      </ItemTemplate>
-                      <ItemStyle CssClass="dtlViewItem" />
-                  </asp:TemplateField>
                   <asp:BoundField DataField="comentario" HeaderText="Comentario" SortExpression="comentario">
                   <ItemStyle CssClass="dtlViewItem" />
                   </asp:BoundField>
-                  <asp:TemplateField HeaderText="Fecha" SortExpression="fecha">
-                      <EditItemTemplate>
-                          <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("fecha") %>'></asp:TextBox>
-                      </EditItemTemplate>
-                      <InsertItemTemplate>
-                          <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("fecha") %>'></asp:TextBox>
-                      </InsertItemTemplate>
-                      <ItemTemplate>
-                          <asp:Label ID="Label4" runat="server" Text='<%# Bind("fecha") %>'></asp:Label>
-                      </ItemTemplate>
-                      <ItemStyle CssClass="dtlViewItem" />
-                  </asp:TemplateField>
                   <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True">
                   <ControlStyle CssClass="dtlViewComands" />
                   <ItemStyle CssClass="dtlViewComands" />
@@ -117,8 +117,8 @@
                   <asp:BoundField DataField="IdIncidencia" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="IdIncidencia" />
                   <asp:BoundField DataField="IdTipo" HeaderText="Tipo" SortExpression="IdTipo" />
                   <asp:BoundField DataField="IdLugar" HeaderText="Lugar" SortExpression="IdLugar" />
-                  <asp:BoundField DataField="IdUser" HeaderText="Creada por" SortExpression="IdUser" />
                   <asp:BoundField DataField="comentario" HeaderText="Comentario" SortExpression="comentario" />
+                  <asp:BoundField DataField="IdUser" HeaderText="Avisa" SortExpression="IdUser" />
                   <asp:BoundField DataField="fecha" HeaderText="Fecha" SortExpression="fecha" />
               </Columns>
               <EditRowStyle BackColor="#999999" />
