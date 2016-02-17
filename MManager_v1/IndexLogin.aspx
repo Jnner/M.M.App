@@ -32,8 +32,7 @@
                 <a class="navbar-brand" href="#"></a>
             </div>--%>
             <ul class="nav navbar-nav">
-                <li><a href="Index.aspx">Inicio</a></li>
-                <li><a href="IndexAbout.aspx">Acerca de MMApp</a></li>
+                <li><a href="Index.aspx">Acerca de MMApp</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Acceder</a></li>
