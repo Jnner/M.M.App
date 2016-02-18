@@ -20,7 +20,7 @@
 		        <a href="TecnicoIncidencias.aspx">INCIDENCIAS</a>
 	        </li>
             <li>
-		        <a href="SolucionIncidencias.aspx">Incidencias Solucionadas</a>
+		        <a href="SolucionIncidencias.aspx">Resultados Incidencias</a>
 	        </li>
             <li>
 		        <a href="TecnicoInstalaciones.aspx">INSTALACIONES</a>

@@ -45,7 +45,7 @@
                         <div class="jumbotron">
                             <h1>Qué es M.M.App</h1>
                             <p>Esta aplicación está diseñada para gestionar los partes de incidencias de las instalaciones de un Hotel.</p>
-                            <p>Esta aplicación esta pensada para acceder por Wi-fi desde el movil o por ordenador. Y ayudará al personal del Hotel a conseguir los siguientes objetivos a la hora de tratar las incidencias que se puedan ocasionar.</p>
+                            <p>Esta aplicación esta pensada para acceder por Wi-fi desde el movil o por ordenador. Y ayudará al personal del Hotel a conseguir los objetivos principales a la hora de gestionar incidencias en un Hotel.</p>
                         </div>
                             <div class="col-sm-3">
                                 <div class="circle circle2">
@@ -102,7 +102,7 @@
                                                     C,E,B
                                                 </div>
                                                 <div class="col-xs-4">
-                                                    C
+                                                    -
                                                 </div>
                                             </div>
                                         </div>
@@ -115,7 +115,7 @@
                                             <%--<button class="btn btn-primary btn-sm" role="button">Follow</button>--%>
                                         </div>
                                         <div class="panel-figure">
-                                            <img class="img-responsive img-circle" src="Images/gobernanta.jpg" />
+                                            <img class="img-responsive img-circle" src="Images/tecnico.jpg" />
                                         </div>
                                         <div class="panel-body text-center margin-bottom">
                                             <h4 class="panel-header">TÉCNICO</h4>
@@ -135,7 +135,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-xs-4">
-                                                    C,E,B
+                                                    C,E
                                                 </div>
                                                 <div class="col-xs-4">
                                                     -

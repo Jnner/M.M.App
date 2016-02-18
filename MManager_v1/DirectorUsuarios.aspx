@@ -29,7 +29,7 @@
               </UpdateParameters>
           </asp:SqlDataSource>
           <asp:SqlDataSource ID="SqlRol" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [ROL]"></asp:SqlDataSource>
-          <asp:Label ID="lblMensajes" runat="server" Text="Mensaje de error"></asp:Label>
+          <%--<asp:Label ID="lblMensajes" runat="server" Text="Mensaje de error"></asp:Label>--%>
           <br />
           <asp:Button ID="btnInsert" runat="server" OnClick="btnInsert_Click" Text="Nuevo Usuario" />
           <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" CellPadding="4" DataKeyNames="IdUser" DataSourceID="dtlView" ForeColor="#333333" GridLines="None" Height="50px" OnItemDeleted="dtlIncidencias_ItemDeleted" OnItemInserted="dtlIncidencias_ItemInserted" OnItemUpdated="dtlIncidencias_ItemUpdated" OnItemCommand="DetailsView1_ItemCommand">

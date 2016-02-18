@@ -51,4 +51,15 @@
             </div>
       </div>
     </div>
+    <div class="panel panel-success">
+      <div class="panel-heading">
+          <h2>Información de Uso</h2>
+      </div>
+        <div class="panel-body">
+            <div>
+                <p><b>Para enviar una incidencia a los tecnicos como prioritaria:</b></p>
+                <p>Escribe en cualquier parte del campo comentario: -p (prioritario)</p>
+            </div>
+      </div>
+    </div>
 </asp:Content>

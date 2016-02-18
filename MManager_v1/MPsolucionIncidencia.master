@@ -11,7 +11,7 @@
                 </a>
 	        </li>
             <li>
-		        <asp:Button ID="btnLogoutCliente" runat="server" Text="< Volver" CssClass="btn-logout" OnClick="btnLogout_Click" />
+		        <asp:Button ID="btnLogoutCliente" runat="server" Text="Volver al Panel" CssClass="btn-logout" OnClick="btnLogout_Click" />
 	        </li>
         </ul>
     </div>

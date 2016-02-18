@@ -47,7 +47,7 @@
               <RowStyle BackColor="#F7F6F3" CssClass="d" ForeColor="#333333" />
           </asp:DetailsView>
                 <br />
-                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [IdIncidencia], [IdTipo], [IdLugar], [comentario], [IdUser]  FROM [INCIDENCIA] WHERE [comentario] LIKE '%ppp%'"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [IdIncidencia], [IdTipo], [IdLugar], [comentario], [IdUser]  FROM [INCIDENCIA] WHERE [comentario] LIKE '%-p%'"></asp:SqlDataSource>
           <asp:GridView ID="grdPersonal" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="#333333" GridLines="None" HorizontalAlign="Center" Width="100%" CssClass="grdView" PagerStyle-CssClass="pgr" DataKeyNames="IdIncidencia">
               <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
               <Columns>

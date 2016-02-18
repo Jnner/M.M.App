@@ -116,7 +116,7 @@ AND [INCIDENCIA].[IdLugar] = [INSTALACION].[IdLugar]"></asp:SqlDataSource>
                   <asp:BoundField DataField="IdUser" HeaderText="Usuario" SortExpression="IdUser" Visible="False" />
                   <asp:BoundField DataField="modelo" HeaderText="Modelo" SortExpression="modelo" />
                   <asp:BoundField DataField="marca" HeaderText="Marca" SortExpression="marca" />
-                  <asp:TemplateField HeaderText="Fallos">
+                  <asp:TemplateField HeaderText="Fallos" Visible="False">
                       <ItemTemplate>
                           <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSource1" DataTextField="Column1" DataValueField="Column1">
                           </asp:DropDownList>

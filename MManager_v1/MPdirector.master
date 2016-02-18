@@ -14,13 +14,10 @@
 		        <a href="DirectorIncidencias.aspx">INCIDENCIAS</a>
 	        </li>
             <li>
-		        <a href="SolucionIncidencias.aspx">Incidencias Solucionadas</a>
+		        <a href="SolucionIncidencias.aspx">Resultados Incidencias</a>
 	        </li>
             <li>
 		        <a href="DirectorUsuarios.aspx">USUARIOS</a>
-	        </li>
-            <li>
-		        <a href="DirectorInstalaciones.aspx">INSTALACIONES</a>
 	        </li>
             <li>
 		        <asp:Button ID="btnLogoutDirector" runat="server" Text="Cerrar Sesión" CssClass="btn-logout" OnClick="btnLogout_Click" />

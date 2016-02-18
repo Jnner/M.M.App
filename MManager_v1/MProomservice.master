@@ -14,7 +14,7 @@
 		        <a href="RoomserviceIncidencias.aspx">INCIDENCIAS</a>
 	        </li>
             <li>
-		        <a href="SolucionIncidencias.aspx">Incidencias Solucionadas</a>
+		        <a href="SolucionIncidencias.aspx">Resultados Incidencias</a>
 	        </li>
             <li>
 		        <asp:Button ID="btnLogoutCliente" runat="server" Text="Cerrar Sesión" CssClass="btn-logout" OnClick="btnLogout_Click" />

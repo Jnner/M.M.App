@@ -98,7 +98,7 @@
                   <asp:BoundField DataField="comentario" HeaderText="Comentario" SortExpression="comentario">
                   <ItemStyle CssClass="dtlViewItem" />
                   </asp:BoundField>
-                  <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True">
+                  <asp:CommandField ButtonType="Button" ShowEditButton="True" ShowInsertButton="True">
                   <ControlStyle CssClass="dtlViewComands" />
                   <ItemStyle CssClass="dtlViewComands" />
                   </asp:CommandField>
